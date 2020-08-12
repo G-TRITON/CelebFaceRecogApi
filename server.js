@@ -14,10 +14,8 @@ const saltRounds = 10;
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-animated-01673',
-    user : 'triton',
-    password : '',
-    database : 'facerecog'
+    host : process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
